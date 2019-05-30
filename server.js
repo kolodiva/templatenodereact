@@ -13,6 +13,8 @@ const path = require('path');
 // ==============================================
 app.use(cors());
 
+app.use(express.static('public'));
+
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '/dist')));
 
