@@ -32,7 +32,7 @@ app.use(cors());
 
 // Serve the static files from the React app
 
-//app.use(express.static(path.join(__dirname, '/dist')));
+app.use(express.static(path.join(__dirname, '/dist')));
 
  router.get('/', function(req, res) {
      res.sendFile('index.html');
