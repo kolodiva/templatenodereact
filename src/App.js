@@ -17,7 +17,7 @@ class App extends React.Component {
 
 	async handleBtn(e) {
 
-		const {data} = await axios.get('http://localhost:8080/about');
+		const {data} = await axios.get('https://kolodiva.com/about');
 	    
 		//this.setState( { name: data } );
 		this.props.dispatch( { type: 'CNGE_NAME', payload: data } );
