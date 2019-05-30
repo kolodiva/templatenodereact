@@ -8,7 +8,9 @@ var express = require('express');
 var cors 	= require('cors');
 var favicon = require('serve-favicon')
 var app     = express();
-var port    =   process.env.PORT || 8080;
+//var port    =   process.env.PORT || 8080;
+
+var port    =   8080;
 
 var router 	= express.Router();
 
@@ -28,11 +30,11 @@ app.use(cookieParser());
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Serve the static files from the React app
-//app.use(express.static(path.join(__dirname, '/dist')));
+app.use(express.static(path.join(__dirname, '/dist')));
 
-// router.get('/', function(req, res) {
-//     res.sendFile(__dirname + '/public/favicon.ico');
-// });
+ router.get('/', function(req, res) {
+     res.sendFile('index.html');
+ });
 
 // about page route (http://localhost:8080/about)
 router.get('/about', function(req, res) {
