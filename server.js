@@ -14,7 +14,7 @@ const path 	= require('path');
 // ==============================================
 app.use(cors());
 
-app.use(express.static( __dirname + '/public') );
+app.use(express.static('public'));
 
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
