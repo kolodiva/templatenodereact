@@ -57,7 +57,7 @@ class App extends React.Component {
 	<Image src="/public/zamok_138.jpg" fluid />
 </div>
 
-<h2 style={{ textAlign: 'center', color: 'white' }}>Знаменитый замок 138</h2>
+<a href ='https://newfurnitura.ru' ><h2 style={{ textAlign: 'center', color: 'white' }}>Знаменитый замок 138</h2></a>
 
 </div>
 
