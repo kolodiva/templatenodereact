@@ -19,7 +19,7 @@ var path 	= require('path');
 // ROUTES
 // ==============================================
 
-//app.use('public', express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/public'));
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.use(cors());
@@ -28,11 +28,11 @@ app.use(cors());
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(cookieParser());
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
+//app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Serve the static files from the React app
 
-app.use(express.static(path.join(__dirname, '/dist')));
+//app.use(express.static(path.join(__dirname, '/dist')));
 
  router.get('/', function(req, res) {
      res.sendFile('index.html');
