@@ -6,7 +6,7 @@ var bodyParser   = require('body-parser');
 
 var express = require('express');
 var cors 	= require('cors');
-var favicon = require('serve-favicon')
+//var favicon = require('serve-favicon')
 var app     = express();
 //var port    =   process.env.PORT || 8080;
 
@@ -24,10 +24,11 @@ var path 	= require('path');
 
 app.use(cors());
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use('/public', express.static(path.join(__dirname, 'public')));
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(cookieParser());
+
+//app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '/dist')));
@@ -42,7 +43,7 @@ router.get('/about', function(req, res) {
 });
 
 router.get('/text', function(req, res) {
-    res.send( req.cookies ); 
+    res.sendFile( __dirname + '/public/favicon.ico' ); 
 });
 
 // apply the routes to our application
